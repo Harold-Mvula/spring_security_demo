@@ -22,6 +22,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 
 @RestController
+@Secured({"ROLE_ADMIN", "ROLE_EXECUTIVE"})
 @RequestMapping("/api/v1/users")
 @Validated
 public class UserController{
